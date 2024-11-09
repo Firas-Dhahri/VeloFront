@@ -1,0 +1,49 @@
+<!-- src/app/components/afficher-velos/afficher-velos.component.html -->
+<div class="container">
+    <div class="row mb-4 mt-4">
+      <div class="col">
+        <h2 class="mb-4">Vélos</h2>
+      </div>
+      <div class="col-auto ml-auto">
+        <!-- Button to navigate to the add Velo form page -->
+        <button class="btn btn-success" routerLink="/ajoutervelo">Ajouter Vélo</button>
+      </div>
+    </div>
+  
+    <!-- Bootstrap Card to wrap the form -->
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h4>Vélos List</h4>
+      </div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="bg-light">
+            <tr>
+              <th>Type</th>
+              <th>Marque</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let velo of velos">
+              <td>{{ velo.type }}</td>
+              <td>{{ velo.marque }}</td>
+              <td>{{ velo.status ? 'Available' : 'Unavailable' }}</td>
+              <td>
+                <!-- Edit button -->
+                <button class="btn btn-primary btn-sm mr-2" (click)="editVelo(velo)">
+                  Edit
+                </button>
+                <!-- Delete button -->
+                <button class="btn btn-danger btn-sm" (click)="supprimerVelo(velo.id)">
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
