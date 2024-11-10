@@ -13,6 +13,11 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { AjouterveloComponent } from './components/ajoutervelo/ajoutervelo.component';
 import { AfficherveloComponent } from './components/affichervelo/affichervelo.component';
 import { UpdateveloComponent } from './components/updatevelo/updatevelo.component';
+import { PackListComponent } from './components/pack-list/pack-list.component';
+import { AddPackComponent } from './components/add-pack/add-pack.component';
+import { AddActivityComponent } from './components/add-activity/add-activity.component';
+import { ActivityListComponent } from './components/activity-list/activity-list.component';
+import { UpdatePackComponent } from './components/update-pack/update-pack.component';
 
 
 @NgModule({
@@ -21,7 +26,12 @@ import { UpdateveloComponent } from './components/updatevelo/updatevelo.componen
     NavbarComponent,
     AjouterveloComponent,
     AfficherveloComponent,
-    UpdateveloComponent
+    UpdateveloComponent,
+    PackListComponent,
+    AddPackComponent,
+    AddActivityComponent,
+    ActivityListComponent,
+    UpdatePackComponent
   ],
   imports: [
     BrowserModule,
